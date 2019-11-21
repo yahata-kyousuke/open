@@ -1,19 +1,54 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
-<meta charset="UTF-8">
-<script>
-function clickBtn(){
-  alert("テストですこんにちは\(語彙力\)");
-  var cry = 反映させちゃったのね…;
-  document.getElementById("ohh").textContent = cry;
-}
-</script>
+  <input type="text" id="good" value="\"\u0028"+inKind+" == "+inInt+"\u0029 && \u0028"+query+"\u0029\"">
+  <meta charset="UTF-8">
+  <script>
+    function internalClick(){
+      const str = document.getElementById("internal number").value;
+      document.getElementById("input").textContent = str;
+    }
+    function queryClick(){
+      target = document.getElementById("query");
+      target.innerText = document.forms.queryId.queryName.value;
+    }
+    function insideInt(){
+      target = document.getElementById("insideint");
+      target.innerText = document.forms.insideId.insideAfter.value;
+    }
+    function lastAfter(){
+      var inKind = document.getElementById("internal number").value;
+      var inInt = document.getElementById("insideAfter").value;
+      var query = document.getElementById("queryName").value;
+      var max = document.getElementById("maxInt").value;
+      var result = document.getElementById("good").value;
+      alert("\"\u0028"+inKind+" == "+inInt+"\u0029 && \u0028"+query+"\u0029\"");
+      for(i=inInt;i<maxInt;i++){
+        document.getElementById("textarea").textContent("\"\u0028"+inKind+" == "+inInt+"\u0029 && \u0028"+query+"\u0029\"");
+      }
+    }
+  </script>
 </head>
 <body>
-<h1 style="color:green;font-size:60px;">テストだけど？</h1>
-<br/>
-<input type="button" value="ぶっとん" onclick="clickBtn()">
-<p id="ohh"> </p>
+  <h1>テストやんね</h1><p id="input">反映場所</p><p id="insideint">数値</p>
+  <select id="internal number">
+    <option value="mark_variant">mark_variant</option>
+    <option value="variant">variant</option>
+    <option value="skin_id">
+skin_id</option>
+  </select>
+  <input type="button" value="内部数値決定" onclick="internalClick()">
+  <form name="inside int" id="insideId" action="">
+    <input type="text" id="insideAfter" name="insideText" value="">
+    <input type="button" value="初期数値決定" onclick="insideInt()">
+  </form>
+  <input type="text" name="maxName" id="maxInt" value="">
+  <h1>クエリー</h1><p id="query"></p>
+  <form name="queryName" id="queryId" action="">
+    <input type="text" id="queryName" name="queryText" value="query.">
+    <input type="button" value="決定" onclick="queryClick()">
+  </form>
+  <h1 id="this">結果</h1>
+  <input type="button" value="反映" onclick="lastAfter()">
+  <p id="textarea">結果</p>
 </body>
 </html>
