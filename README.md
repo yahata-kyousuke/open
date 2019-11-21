@@ -1,2 +1,9 @@
-# open
-最初のページ
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>テストだけど？</h1>
+</body>
+</html>
